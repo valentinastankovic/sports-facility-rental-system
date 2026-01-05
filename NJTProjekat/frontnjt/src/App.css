@@ -1,0 +1,86 @@
+/* Navigacija */
+.navbar {
+  background: var(--clr-white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Naslov levo */
+.nav-left .logo {
+  color: var(--clr-deep);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* Linkovi u sredini */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex: 1; /* zauzima prostor između leve i desne strane */
+}
+
+.nav-links .nav-btn {
+  background: transparent;
+  border: 2px solid var(--clr-mid1);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: var(--clr-mid2);
+}
+
+.nav-links .nav-btn:hover,
+.nav-links .nav-btn.active {
+  background: var(--clr-mid2);
+  color: var(--clr-white);
+  border-color: var(--clr-mid2);
+}
+
+/* Dugme desno */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right .logout {
+  background: var(--clr-mid2);
+  color: var(--clr-white);
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.nav-right .logout:hover {
+  background: var(--clr-mid1);
+}
+
+/* Responsive za manje ekrane */
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav-right {
+    justify-content: center;
+  }
+}

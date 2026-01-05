@@ -1,0 +1,211 @@
+.klijent-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  color: var(--clr-deep);
+  margin-bottom: 1.5rem;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.search-section label {
+  font-weight: 600;
+  color: var(--clr-deep);
+}
+
+.search-section input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--clr-mid1);
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.client-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.client-table th {
+  background: var(--clr-mid1);
+  color: white;
+  padding: 0.8rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.client-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.client-table tr:hover {
+  background-color: #f8f3ff;
+}
+
+.add-client {
+  text-align: center;
+}
+
+.btn.primary {
+  background: var(--clr-mid2);
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn.primary:hover {
+  background: var(--clr-mid1);
+}
+
+.btn.small {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn.edit {
+  background: var(--clr-mid2);
+  color: white;
+}
+
+.btn.edit:hover {
+  background: var(--clr-mid1);
+}
+
+.btn.delete {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn.delete:hover {
+  background: #c0392b;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  backdrop-filter: blur(3px);
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 400px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal h2 {
+  text-align: center;
+  color: var(--clr-deep);
+  margin-bottom: 1rem;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-form input {
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  border: 2px solid var(--clr-mid1);
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.modal-form input:focus {
+  border-color: var(--clr-mid2);
+  box-shadow: 0 0 6px rgba(128, 0, 255, 0.2);
+}
+
+/* Dugmad u modalu */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-actions .btn {
+  flex: 1;
+  margin: 0 0.4rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+.btn.cancel {
+  background: var(--clr-mid1);
+  color: white;
+}
+
+.btn.cancel:hover {
+  background: var(--clr-mid2);
+}
+
+.btn.save {
+  background: var(--clr-mid2);
+  color: white;
+}
+
+.btn.save:hover {
+  background: var(--clr-mid1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 90%;
+  }
+  .search-section input {
+    width: 80%;
+  }
+}

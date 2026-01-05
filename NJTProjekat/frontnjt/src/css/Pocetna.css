@@ -1,0 +1,226 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Paleta */
+:root {
+  --clr-light: #f0d3f7;
+  --clr-mid1: #b98ea7;
+  --clr-mid2: #a57982;
+  --clr-dark: #302f4d;
+  --clr-deep: #120d31;
+  --clr-white: #ffffff;
+  --clr-text: #302f4d;
+}
+
+body {
+  background: var(--clr-light);
+  color: var(--clr-text);
+  overflow-x: hidden;
+}
+
+/* Navigacija */
+.navbar {
+  background: var(--clr-white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;          /* vertikalno centriranje */
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.logo {
+  color: var(--clr-deep);
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.logo:hover {
+  color: var(--clr-mid2);
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center; /* centriranje linkova */
+}
+
+.nav-links a {
+  color: var(--clr-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--clr-mid2);
+  transform: translateY(-2px);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-right .logout {
+  background: var(--clr-mid2);
+  color: var(--clr-white);
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-right .logout:hover {
+  background: var(--clr-mid1);
+  transform: scale(1.05);
+}
+
+/* Dashboard hero sekcija */
+.dashboard-hero {
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--clr-mid1), var(--clr-mid2));
+  color: var(--clr-white);
+  padding: 3rem 2rem;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tekstualni deo */
+.dashboard-text h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.dashboard-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  max-width: 600px;
+}
+
+/* Statistika */
+.employee-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1.2rem;
+  border-radius: 12px;
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.stat-card:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+}
+
+.stat-card strong {
+  font-size: 1.8rem;
+  display: block;
+  color: var(--clr-white);
+}
+
+.stat-card span {
+  font-size: 0.95rem;
+}
+
+/* Slika */
+.dashboard-image {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-badge {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(48, 47, 77, 0.8);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--clr-white);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .nav-right {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .dashboard-text h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-text p {
+    font-size: 1rem;
+  }
+
+  .employee-stats {
+    flex-direction: column;
+  }
+
+  .dashboard-image {
+    margin-top: 2rem;
+  }
+}

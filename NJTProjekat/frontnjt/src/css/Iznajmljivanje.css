@@ -1,0 +1,257 @@
+.iznajmljivanje-page {
+  background-color: #f3d8f5;
+  min-height: 100vh;
+  padding: 40px 60px;
+  font-family: "Poppins", sans-serif;
+  color: #2e1e2f;
+}
+
+.iznajmljivanje-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #2e1e2f;
+}
+
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.search-box label {
+  font-weight: 600;
+  color: #3c2c3d;
+}
+
+.search-box input {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #c797b6;
+  width: 100%;
+  background-color: #fff;
+  transition: 0.2s ease;
+}
+
+.search-box input:focus {
+  border-color: #a66fa3;
+  box-shadow: 0 0 0 3px rgba(166, 111, 163, 0.25);
+  outline: none;
+}
+
+.btn.primary {
+  background-color: #a66fa3;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn.primary:hover {
+  background-color: #914b8c;
+}
+
+.iznajmljivanje-table-container {
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.iznajmljivanje-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.iznajmljivanje-table th,
+.iznajmljivanje-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e2b7d3;
+}
+
+.iznajmljivanje-table th {
+  background-color: #dca7db;
+  color: #2e1e2f;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.iznajmljivanje-table tbody tr:hover {
+  background-color: rgba(166, 111, 163, 0.15);
+  transition: background-color 0.2s ease;
+}
+
+.empty {
+  text-align: center;
+  font-style: italic;
+  color: #6c5870;
+  padding: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.modal h2 {
+  margin-bottom: 16px;
+  color: #2e1e2f;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-form input,
+.modal-form select,
+.modal-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #c797b6;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  transition: 0.2s ease;
+}
+
+.modal-form input:focus,
+.modal-form select:focus,
+.modal-form textarea:focus {
+  border-color: #a66fa3;
+  box-shadow: 0 0 0 3px rgba(166, 111, 163, 0.25);
+  outline: none;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.btn.cancel {
+  background-color: #ccc;
+  color: #2e1e2f;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn.cancel:hover {
+  background-color: #b3b3b3;
+}
+
+.btn.save {
+  background-color: #a66fa3;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn.save:hover {
+  background-color: #914b8c;
+}
+
+/* Dugme za dodavanje recenzije */
+.btn.recenzija-btn {
+  background-color: #f0a6cf;
+  color: #2e1e2f;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn.recenzija-btn:hover {
+  background-color: #e27fc0;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.price-display {
+  text-align: right;
+  font-size: 1.1rem;
+  color: #7d3e91;
+  font-weight: 600;
+  padding-top: 10px;
+  border-top: 1px solid #e2b7d3;
+  margin-top: 8px;
+}
+
+.modal select,
+.modal input,
+.modal textarea {
+  transition: all 0.2s ease;
+}
+
+.modal select:hover,
+.modal input:hover,
+.modal textarea:hover {
+  border-color: #a66fa3;
+}
+
+.modal-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal h2 {
+  text-align: center;
+  font-weight: 700;
+  color: #2e1e2f;
+  margin-bottom: 18px;
+}
+
+.btn.save {
+  background-color: #a66fa3;
+  color: #fff;
+  padding: 10px 18px;
+  font-weight: 600;
+}
+
+.btn.save:hover {
+  background-color: #914b8c;
+}
